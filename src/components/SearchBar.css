@@ -1,0 +1,11 @@
+.SearchBar{
+    width:70%;
+    margin-left:10px;
+}
+.Input{
+    border:1px solid black;
+    padding:15px;
+    width:50%;
+    font-size: 24px;
+    border-radius:4px;
+}
