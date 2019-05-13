@@ -1,5 +1,4 @@
 import React from 'react'
-import "./BankDataTable.css";
 import Spinner from './Spinner';
 export default (props) => {
    let tableBodyData=[];
@@ -11,11 +10,11 @@ export default (props) => {
           if(props.data[i].address.toLowerCase().indexOf(props.searchText.toLowerCase())!==-1)
           { 
           tableBodyData.push(
-            (<tr key={i}><td>{props.data[i].ifsc}</td>
-            <td>{props.data[i].bank_id}</td>
-            <td>{props.data[i].branch}</td>
-            <td>{props.data[i].address}</td>
-            <td>{props.data[i].bank_name}</td></tr>))
+            (<tr key={i}><td className="font-weight-bold">{props.data[i].ifsc}</td>
+            <td className="font-weight-bold">{props.data[i].bank_id}</td>
+            <td className="font-weight-bold">{props.data[i].branch}</td>
+            <td className="font-weight-bold">{props.data[i].address}</td>
+            <td className="font-weight-bold">{props.data[i].bank_name}</td></tr>))
        }
     }
        console.log(tableBodyData);
@@ -25,8 +24,8 @@ export default (props) => {
    
   return (
     <div>
-      <table id="customers">
-      <thead>
+      <table className="table table-bordered table-hover">
+      <thead className="thead-dark">
       <tr><th>IFSC</th>
       <th>BANK_ID</th>
       <th>BRANCH</th>

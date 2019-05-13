@@ -1,11 +1,12 @@
 .SearchBar{
-    width:70%;
+    width:40%;
     margin-left:10px;
 }
+
 .Input{
+    width:90%;
     border:1px solid black;
-    padding:15px;
-    width:50%;
+    padding:5px;
     font-size: 24px;
     border-radius:4px;
 }
