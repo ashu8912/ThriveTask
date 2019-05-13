@@ -31,8 +31,11 @@ class App extends React.Component{
   }
   render()
   {
-    console.log(this.state.pageCount);
-  return (
+    if(this.props.selectedCityData)
+    {
+    console.log(Math.floor(this.props.selectedCityData.length/10))
+    }
+    return (
     <div>
      <h1 style={{textAlign:"center"}}>Bank Branches</h1> 
      <div className="row Filters">
@@ -40,8 +43,8 @@ class App extends React.Component{
      <SearchBar changeHandler={this.searchTextHandler}/>
      {this.props.selectedCityData && <div><Pagination
       offset={this.state.offset}
-      limit={10}
-      total={Math.floor(this.props.selectedCityData.length/10)}
+      limit={20}
+      total={this.props.selectedCityData.length}
       color={"teal"}
       onClick={(event,props,offset) => this.handleClick(event,props,offset)}
     /></div>}
